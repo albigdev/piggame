@@ -1,0 +1,100 @@
+@media (max-width: 450px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+
+  main {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    max-width: 100rem;
+    height: 30rem;
+    position: relative;
+    overflow: visible;
+    border-radius: 0px;
+  }
+
+  .playername {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .player--0 {
+    flex: 1;
+  }
+
+  .player--1 {
+    flex: 1;
+  }
+
+  .score {
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+  }
+
+  .current {
+    justify-self: center;
+    padding: 2rem;
+    width: 100%;
+    background-color: #5c940d;
+    border-radius: 20px;
+  }
+
+  .current-label {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .current-score {
+    font-size: 1.5rem;
+  }
+
+  .current-throw {
+    font-size: 1.5rem;
+  }
+
+  .menu {
+    top: 115%;
+    gap: 1rem;
+    z-index: 1;
+  }
+
+  .player-win,
+  .player-loser,
+  .computer-win,
+  .computer-loser {
+    width: 5rem;
+  }
+
+  .btn {
+    font-family: inherit;
+    border: none;
+    color: #212529;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .logo {
+    height: 10rem;
+  }
+
+  .dice {
+    height: 10rem;
+  }
+
+  .modal {
+    top: 20%;
+    left: 50%;
+    width: 300%;
+    padding: 5rem;
+  }
+
+  .modal-text {
+    color: #212529;
+    font-size: 1.8rem;
+  }
+}

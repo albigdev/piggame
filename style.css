@@ -1,0 +1,187 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Acme", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  height: 100vh;
+  color: #fff;
+  background-image: linear-gradient(to top left, #37b24d 0%, #94d82d 100%);
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 100rem;
+  height: 40rem;
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes spinAndFade {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-roll {
+  animation: spinAndFade 2s forwards;
+}
+
+.animate-appear {
+  animation: appear 2s;
+}
+
+.player {
+  text-align: center;
+  width: 50rem;
+  padding: 5rem;
+  background-color: rgba(92, 148, 13, 0.59);
+}
+
+.player--0 {
+  align-self: stretch;
+}
+
+.player--1 {
+  align-self: stretch;
+}
+
+.player--active {
+  background-color: rgba(230, 119, 0, 0.897);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: absolute;
+  text-align: center;
+}
+
+.playername {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.score {
+  font-size: 5rem;
+  margin-bottom: 5rem;
+}
+
+.current {
+  justify-self: center;
+  padding: 3.2rem;
+  width: 50%;
+  background-color: #5c940d;
+  border-radius: 20px;
+}
+
+.current-label {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.current-score {
+  font-size: 2rem;
+}
+
+.current-throw {
+  font-size: 2rem;
+}
+
+.logo {
+  height: 20rem;
+  transition: transform 1s ease;
+}
+
+.dice {
+  height: 20rem;
+}
+
+.btn {
+  font-family: inherit;
+  border: none;
+  color: #212529;
+  border-radius: 15px;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #f8f9fa;
+}
+
+.btn:link,
+.btn:visited {
+  background-color: #f8f9fa;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200%;
+
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.modal-text {
+  color: #212529;
+  font-size: 1.8rem;
+}
